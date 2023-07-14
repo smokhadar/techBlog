@@ -1,0 +1,64 @@
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="login">Login</button>
+<button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-whatever="signup">Signup</button>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Please enter your credentials.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="username-login" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="username-login"></input>
+          </div>
+          <div class="mb-3">
+            <label for="password-login" class="col-form-label">Password:</label>
+            <input type="text" class="form-control" id="password-login"></input>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="loginModalB">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="signupModalLabel">Please select a username and password.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="username-signup" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="username-signup"></input>
+          </div>
+          <div class="mb-3">
+            <label for="email-signup" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="email-signup"></input>
+          </div>
+          <div class="mb-3">
+            <label for="password-signup" class="col-form-label">Password:</label>
+            <input type="text" class="form-control" id="password-signup"></input>
+          </div>
+          <div class="mb-3">
+            <label for="passwordV" class="col-form-label">Password:</label>
+            <input type="text" class="form-control" id="passwordV"></input>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="signupModalB">Signup</button>
+      </div>
+    </div>
+  </div>
+</div>
