@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
+}
+
+
+body {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #c9e4de;
+}
+
+.container {
+    /* position: relative;
+    width: 35vw; */
+    width: 40%;
+    height: 60vh;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-width: 238px;
+    padding: 0 10px;
+}
+
+#mainTitle {
+    font-size: 129px;
+    color: #df4adf;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    font-weight: 100;
+}
+

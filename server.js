@@ -41,7 +41,9 @@ app.engine('handlebars', hbs.engine);
 app.use(router);
 
 const navbar = hbs._compileTemplate(fs.readFileSync(__dirname + '/views/partials/navbar.handlebars').toString('utf-8'));
-hbs.getPartials('navBar', navbar);
+const newpost = hbs._compileTemplate(fs.readFileSync(__dirname + '/views/partials/newpost.handlebars').toString('utf-8'));
+hbs.getPartials('navbar', navbar);
+hbs.getPartials('newpost', newpost);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

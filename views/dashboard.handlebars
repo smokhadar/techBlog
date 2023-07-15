@@ -1,9 +1,14 @@
 {{> navbar}}
 
+<div class="userInfo d-grid gap-2">
+         <h2 id="welcome"> Welcome, {{req.session.username}}</h2>
+</div>
+
+{{> newpost}}
+
 {{#each blogPosts as |post|}}
 <div class="blogPosts">
-        <h1 id="postTitle"><a href="api/blogPost/{{post.id}}">{{post.title}}</a></h1>
-        <h2 id="username">Writer: <span>{{post.user.username}}</span></h2>
+        <h1 id="postTitle"><a href="api/blogPost/user/{{post.user_id}}">{{post.title}}</a></h1>
         <div class="body">
          <h3 id="postDate">{{post.created_at}}</h2>
             <p id="postBody">{{post.body}}</p>

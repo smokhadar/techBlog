@@ -1,0 +1,42 @@
+.blogPosts {
+    margin: 10px;
+}
+
+#postTitle {
+    text-align: center;
+}
+
+#postTitle a {
+    font-size: 24px;
+    color: black;
+}
+
+#username {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 200;
+    text-decoration: wavy;
+}
+
+#username span {
+    color: #df4adf;
+}
+
+.body {
+    background: #f6e6e5;
+    padding: 20px 15px 10px 20px;
+    margin: 10px;
+}
+
+#welcome {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.userInfo button {
+    margin: auto;
+}
+
+#post {
+    margin: auto;
+}
