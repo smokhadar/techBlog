@@ -1,0 +1,6 @@
+{{#each comments as |comment|}}
+<div class="comments">
+    <p id="commentBody">{{comment.body}}</p>
+    <h3 id="senderUsername">{{comment.user.username}}</h3>
+</div>
+{{/each}}

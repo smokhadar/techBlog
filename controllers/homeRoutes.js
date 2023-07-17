@@ -7,7 +7,7 @@ var session;
 router.get('/', async (req, res) => {
     try {
         session = req.session;
-        if (session.username) {
+        if (session.user_id) {
             res.render('homepage')
         } else {
             res.render('login', {
@@ -40,12 +40,21 @@ router.get('/homepage', async (req, res) =>{
 });
 
 router.get('/dashboard', async (req, res) => {
-    res.render('dashboard');
-    console.log(req.session.user_id);
+    // const session = req.session;
+    res.render('dashboard', {
+    });
+    // console.log('session',session);
+    // console.log('username:', req.session.username, 'user_id', req.session.user_id);
 });
 
 router.post('/partial', async(req, res) => {
 
 });
+
+router.get('/logout', async(req, res) => {
+    res.render('login', {
+        login: true
+    });
+})
 
 module.exports = router;

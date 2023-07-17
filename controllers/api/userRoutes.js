@@ -42,6 +42,7 @@ router.post('/login', async (req, res) => {
             req.session.logged_in = true;
 
             res.json({ user: userData, message: 'You are now logged in!'});
+            console.log(res.session.u)
         });
 
     } catch (err) {
@@ -52,7 +53,7 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req,res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
-          res.status(204).end();
+        res.status(204).end();
         });
       } else {
         res.status(404).end();
@@ -61,9 +62,18 @@ router.post('/logout', (req,res) => {
 
 router.get('/profile', async (req, res) => {
     try {
-
+        if (!req.session.user_id) {
+            return res.status(400).json({ message: 'Access denied'})
+        } else {
+            const userData = await User.findByPk(req.session.user_id);
+            res.status(200);
+            res.render('profile', {
+                userData,
+                profile: true,
+            });
+        }
     } catch(err) {
-
+        res.status(500).json(err);
     }
 });
 

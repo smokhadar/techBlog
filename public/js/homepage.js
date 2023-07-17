@@ -11,13 +11,30 @@ const newPostHandler = async(event) => {
             body: JSON.stringify({ title, body }),
             headers: { 'Content-Type': 'application/json'},
         });
-    if (response.ok) {
-        document.location.replace('/dashboard');
-    } else {
-        alert(response.statusText);
-    }
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
     }
 };
+
+const dashboardHandler = async(event) => {
+    event.preventDefault();
+}
+
+// const viewProfileHandler = async(event) => {
+//     event.preventDefault();
+
+//     const response = await fetch('/api/user/profile', {
+//         method: 'GET',
+//     });
+//     if (response.ok) {
+//         document.location.replace('/profile');
+//     } else {
+//         alert(response.statusText);
+//     }
+// };
 
 document
     .querySelector('#post')
